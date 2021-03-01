@@ -1,0 +1,55 @@
+﻿@page
+@model MyRazor01.Pages.SearchPageModel
+@{
+    ViewData["Title"] = "SearchPage";
+}
+
+<h1>SearchPage</h1>
+
+
+
+<form>
+
+    <p>
+
+        Title: <input type="text" asp-for="SearchString" />
+
+        <input type="submit" value="Filter" />
+
+    </p>
+
+</form>
+
+
+
+@if (Model.SearchString != null && (string)Model.SearchString != String.Empty)
+{
+
+
+
+    @foreach (var item in Model.FoundFilms)
+
+
+
+    {
+
+        <p>@item.FilmTitle</p>
+
+
+
+    }
+
+
+
+    if (Model.FoundFilms.Count == 0)
+
+    {
+
+        <p>Sorry no matches.</p>
+
+    }
+
+
+
+}
+

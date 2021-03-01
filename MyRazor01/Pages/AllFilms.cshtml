@@ -1,0 +1,16 @@
+﻿@page 
+@model MyRazor01.Pages.AllFilmsModel
+@{
+    ViewData["Title"] = "AllFilms";
+}
+
+<h1>AllFilms</h1>
+
+
+
+@foreach (var item in Model.AllFilms)
+{
+    <p>@item.FilmTitle</p>
+    <p><a asp-page="DetailPage" asp-route-id="@item.FilmID">View Details</a></p>
+}
+

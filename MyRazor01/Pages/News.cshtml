@@ -1,0 +1,12 @@
+﻿@page
+@model MyRazor01.Pages.NewsModel
+@{
+    ViewData["Title"] = "News";
+    ViewData["LatestNews"] = "Man Bites Dog";
+    ViewBag.author = "Fred";
+}
+
+<h1>News</h1>
+<p>@ViewData["LatestNews"]</p>
+<p>@ViewBag.author</p>
+
